@@ -102,7 +102,7 @@ class BaseOptions:
         parser.add_argument("--output_nc", type=int, default=3, help="# of output image channels")
 
         # for setting inputs
-        parser.add_argument("--dataroot", type=str, default="./datasets/cityscapes/")
+        parser.add_argument("--dataroot", type=str, default="")
         parser.add_argument("--dataset_mode", type=str, default="coco")
         parser.add_argument(
             "--serial_batches",

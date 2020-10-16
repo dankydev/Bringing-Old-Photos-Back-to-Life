@@ -86,7 +86,7 @@ if __name__ == "__main__":
     ## Stage 2: Face Detection
 
     print("Running Stage 2: Face Detection")
-    os.chdir(".././Face_Detection")
+    os.chdir("..\\Face_Detection")
     stage_2_input_dir = os.path.join(stage_1_output_dir, "restored_image")
     stage_2_output_dir = os.path.join(opts.output_folder, "stage_2_detection_output")
     if not os.path.exists(stage_2_output_dir):
@@ -100,12 +100,14 @@ if __name__ == "__main__":
 
     ## Stage 3: Face Restore
     print("Running Stage 3: Face Enhancement")
-    os.chdir(".././Face_Enhancement")
+    os.chdir("..\\Face_Enhancement")
     stage_3_input_mask = "./"
     stage_3_input_face = stage_2_output_dir
     stage_3_output_dir = os.path.join(opts.output_folder, "stage_3_face_output")
+
     if not os.path.exists(stage_3_output_dir):
         os.makedirs(stage_3_output_dir)
+
     stage_3_command = (
         "python test_face.py --old_face_folder "
         + stage_3_input_face
@@ -125,7 +127,7 @@ if __name__ == "__main__":
 
     ## Stage 4: Warp back
     print("Running Stage 4: Blending")
-    os.chdir(".././Face_Detection")
+    os.chdir("..\\Face_Detection")
     stage_4_input_image_dir = os.path.join(stage_1_output_dir, "restored_image")
     stage_4_input_face_dir = os.path.join(stage_3_output_dir, "each_img")
     stage_4_output_dir = os.path.join(opts.output_folder, "final_output")

@@ -53,7 +53,7 @@ class BaseOptions:
         self.parser.add_argument("--output_nc", type=int, default=3, help="# of output image channels")
 
         # for setting inputs
-        self.parser.add_argument("--dataroot", type=str, default="./datasets/cityscapes/")
+        self.parser.add_argument("--dataroot", type=str, default="")
         self.parser.add_argument(
             "--resize_or_crop",
             type=str,

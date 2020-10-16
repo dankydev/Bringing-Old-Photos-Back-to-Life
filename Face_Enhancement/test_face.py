@@ -20,7 +20,8 @@ model.eval()
 visualizer = Visualizer(opt)
 
 
-single_save_url = os.path.join(opt.checkpoints_dir, opt.name, opt.results_dir, "each_img")
+single_save_url = os.path.join(opt.results_dir, "each_img")
+print(single_save_url)
 
 
 if not os.path.exists(single_save_url):

@@ -153,7 +153,8 @@ if __name__ == "__main__":
 
         try:
             generated = model.inference(input, mask)
-        except:
+        except Exception as e:
+            print(e)
             print("Skip %s" % (input_name))
             continue
 

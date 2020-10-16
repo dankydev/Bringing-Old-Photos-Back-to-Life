@@ -26,7 +26,7 @@ class FaceTestDataset(BaseDataset):
         image_path = os.path.join(opt.dataroot, opt.old_face_folder)
         label_path = os.path.join(opt.dataroot, opt.old_face_label_folder)
 
-        image_list = os.listdir(image_path)
+        image_list = os.listdir(image_path) 
         image_list = sorted(image_list)
         # image_list=image_list[:opt.max_dataset_size]
 
